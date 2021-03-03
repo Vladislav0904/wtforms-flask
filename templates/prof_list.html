@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style="margin-left: 50px;"><b>Список профессий</b></h2>
+<{{ list }} style="margin-left: 50px;">
+{% for spec in specialities %}
+<li>{{ spec }}</li>
+{% endfor %}
+</{{ list }} >
+{% endblock %}
