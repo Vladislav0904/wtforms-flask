@@ -29,5 +29,21 @@ def list_prof(list):
         return 'Передан неверный параметр. Используйте "ol" или "ul"!'
 
 
+@app.route('/answer')
+@app.route('/auto_answer')
+def answer():
+    result = {
+        'title': 'Анкета',
+        'surname': 'Brown',
+        'name': 'Marshall',
+        'education': 'выше среднего',
+        'profession': 'врач',
+        'sex': 'male',
+        'motivation': 'Хочу заработать денег',
+        'ready': True
+    }
+    return render_template('auto-answer.html', answer=result, title=result['title'])
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')

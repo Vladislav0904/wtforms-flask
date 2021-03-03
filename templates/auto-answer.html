@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block links %}
+<link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+{% endblock %}
+
+{% block content %}
+<h4>Фамилия: {{answer["surname"]}}</h4>
+<h4>Имя: {{answer["name"]}}</h4>
+<h4>Образование: {{answer["education"]}}</h4>
+<h4>Профессия: {{answer["profession"]}}</h4>
+<h4>Пол: {{answer["sex"]}}</h4>
+<h4>Мотивация: {{answer["motivation"]}}</h4>
+<h4>Готовы ли остаться на Марсе? {{answer["ready"]}}</h4>
+{% endblock %}
+
+
