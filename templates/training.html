@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if ing %}
+<h2 align="center"><b>Инженерные тренажеры</b></h2>
+<p style="text-align: center;"><img src='/static/img/spaceship_is.jpg'></p>
+{% else %}
+<h2 align="center"><b>Научные симуляторы</b></h2>
+<p style="text-align: center;"><img src='/static/img/spaceship_ns.jpg'></p>
+{% endif %}
+{% endblock %}

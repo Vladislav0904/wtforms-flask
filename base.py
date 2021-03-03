@@ -9,5 +9,14 @@ def index(title):
     return render_template('base.html', title=title)
 
 
+@app.route('/training/<prof>')
+def training(prof):
+    print({url_for('static', filename='img/spaceship_is.jpg')})
+    if 'инженер' in prof.lower() or 'строитель' in prof.lower():
+        return render_template('training.html', ing=True)
+    else:
+        return render_template('training.html')
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
